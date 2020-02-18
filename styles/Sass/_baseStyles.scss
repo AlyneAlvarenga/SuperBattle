@@ -1,3 +1,11 @@
+html {
+    font-size: 62.5%;
+    line-height: 1.6;
+    margin: 0;
+    //*
+    color: white;
+}
+
 body,
 h1,
 h2,
@@ -12,69 +20,166 @@ footer {
     padding: 0;
 }
 
-html{
-    font-size:62.5%;
-    line-height:1.6;
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    //*
+    font-family: 'Nosifer', cursive;
+    // font-family: 'Metal Mania', cursive;
 }
 
-h1{
-    text-align:center;
-    font-size: 5rem;
-}
-h2{
+h2 {
     font-size: 3.5rem;
 }
 
-p, select, button{
+//*
+h3 {
+    font-size: 2.5rem;
+}
+
+//*
+h2, h3 {
+    // font-family: 'Atomic Age', cursive;
+    // font-family: 'Federant', cursive;
+    font-family: 'Metal Mania', cursive;
+
+}
+
+p, select, option, button {
     font-size: 2rem;
-    font-weight:bold;
-}
-main{
-    background-image: url(../assets/background.jpg);
-    height:85.2vh;
 }
 
-header{
-    background:#dfc31a;
-    border-bottom: 0.5rem solid black
+//! My styles
+
+.background {
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.instructions{
+img {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 14px 14px 5px 0 white;
+}
+
+.imgContainer {
+    width: 300px;
+    margin: 10px 0 35px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 15.2vh;
+}
+
+main {
+    min-height: calc(80vh - 25px);
+}
+
+footer {
+    min-height: 25px;
+    text-align: center;
+    // background: linear-gradient(90deg, rgba(2,79,218,1) 6%, rgba(0,102,226,1) 37%, rgba(189,16,10,1) 66%, rgba(154,6,4,1) 100%);
+    // background: white;
+    background: #DFC21A;
+    color: black;
+    p {
+        font-weight: bold;
+    }
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    background-color: #DFC21A;
+    padding: 12px 25px;
+}
+
+.instructionContainer {
+    width: 700px;
+    margin: 35px auto;
     text-align: center;
 }
 
-.dropdowns{
-display:flex;
-flex-direction: row;
-justify-content: space-between;
-padding:1rem 2rem;
+.test {
+    display: none;
+    justify-content: space-around;
 }
 
-.mainSection{
-    display:flex;
+.htmlToAppend {
+    display: none;
+}
+
+.flexContainerTop, .flexContainerBottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.flexContainerTop {
+    margin-bottom: 160px;
+    margin-top: 105px;
+}
+
+.flexContainerBottom {
+    margin-bottom: 50px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultContainer {
+    text-align: center;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height:71.5vh
+    justify-content: center;
+    align-items: center;
 }
 
-.battleButton{
-    display:flex;
-    align-self: center;
-    padding-bottom:4rem
-}
-.htmlToAppend{
-    display:none;
+.winnerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-footer{
-    text-align:center;
-    background:#dfc31a;
-    border-top:0.5rem solid black
-}   
+//drawing the circles
+.circleContainer {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
 
-button{
-    padding:0.5rem;
-    width:20rem;
-    background: #dfc31a;
-    border: 0.5rem solid black
+.circleLabel {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+    .svgGroup {
+    fill: none;
+    stroke: none;
+}
+
+    .baseCircle {
+    stroke-width: 7px;
+    stroke: grey;
+}
+
+    .secondCircleHero1, .secondCircleHero2 {
+    stroke: white;
+    stroke-width: 7px;
+    stroke-linecap: round;
 }
