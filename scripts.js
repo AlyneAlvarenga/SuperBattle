@@ -65,7 +65,7 @@ superhero1.on('change', function () {
             </div>
         </div>
         `;
-        $('.test').append(htmlToAppend);
+        $('.result1').html(htmlToAppend);
         powerStats[0].name = result.name;
         powerStats[0].intelligence = result.powerstats.intelligence;
         powerStats[0].speed = result.powerstats.speed;
@@ -89,7 +89,7 @@ superhero2.on('change', function () {
         <div class="resultContainer">
             <h2>${result.name}</h2>
             <div class="imgContainer">
-                <img src="${result.image.url}" alt=""/>
+                <img src="${result.image.url}" alt="${result.name}"/>
             </div>
             <div class="circleContainer">
                 <svg class="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +106,7 @@ superhero2.on('change', function () {
             </div>
         </div>
         `;
-        $('.test').append(htmlToAppend);
+        $('.result2').html(htmlToAppend);
         powerStats[1].name = result.name;
         powerStats[1].intelligence = result.powerstats.intelligence;
         powerStats[1].speed = result.powerstats.speed;
@@ -180,6 +180,7 @@ battleButton.on('click', function () {
     flexContainer.css('display', 'none');
     $('.winnerContainer').css('display', 'block');
     $('.test').css('display', 'flex');
+    $('main').css('height', '81.2vh');
     whoIsWinner();
     battleButton.css('display', 'none');
     resetButton.css('display', 'block');
