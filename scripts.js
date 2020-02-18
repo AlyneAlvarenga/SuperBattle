@@ -65,7 +65,7 @@ superhero1.on('change', function () {
             </div>
         </div>
         `;
-        $('.test').html(htmlToAppend);
+        $('.test').append(htmlToAppend);
         powerStats[0].name = result.name;
         powerStats[0].intelligence = result.powerstats.intelligence;
         powerStats[0].speed = result.powerstats.speed;
@@ -106,7 +106,7 @@ superhero2.on('change', function () {
             </div>
         </div>
         `;
-        $('.test').html(htmlToAppend);
+        $('.test').append(htmlToAppend);
         powerStats[1].name = result.name;
         powerStats[1].intelligence = result.powerstats.intelligence;
         powerStats[1].speed = result.powerstats.speed;
