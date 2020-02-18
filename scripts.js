@@ -188,7 +188,8 @@ battleButton.on('click', function () {
 
 resetButton.on('click', function () {
 
-    $('.test').children().remove();
+    $('.result1').children().remove();
+    $('.result2').children().remove();
     $('.test').css('display', 'none');
     $('.winnerContainer').children().remove();
     instructionContainer.css('display', 'block');

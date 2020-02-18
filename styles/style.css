@@ -308,6 +308,11 @@ p, select, option, button {
   font-size: 2rem;
 }
 
+.resetButton {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
 .background {
   background-image: url("../assets/background.jpg");
   background-size: cover;
@@ -341,7 +346,7 @@ header {
 }
 
 main {
-  min-height: calc(80vh - 25px);
+  min-height: 76.7vh;
 }
 
 footer {
