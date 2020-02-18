@@ -1,0 +1,80 @@
+body,
+h1,
+h2,
+p,
+ul,
+div,
+section,
+img,
+header,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size:62.5%;
+    line-height:1.6;
+}
+
+h1{
+    text-align:center;
+    font-size: 5rem;
+}
+h2{
+    font-size: 3.5rem;
+}
+
+p, select, button{
+    font-size: 2rem;
+    font-weight:bold;
+}
+main{
+    background-image: url(../assets/background.jpg);
+    height:85.2vh;
+}
+
+header{
+    background:#dfc31a;
+    border-bottom: 0.5rem solid black
+}
+
+.instructions{
+    text-align: center;
+}
+
+.dropdowns{
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+padding:1rem 2rem;
+}
+
+.mainSection{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:71.5vh
+}
+
+.battleButton{
+    display:flex;
+    align-self: center;
+    padding-bottom:4rem
+}
+.htmlToAppend{
+    display:none;
+}
+
+footer{
+    text-align:center;
+    background:#dfc31a;
+    border-top:0.5rem solid black
+}   
+
+button{
+    padding:0.5rem;
+    width:20rem;
+    background: #dfc31a;
+    border: 0.5rem solid black
+}
