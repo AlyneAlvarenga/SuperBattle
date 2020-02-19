@@ -482,3 +482,65 @@ button {
   stroke-width: 7px;
   stroke-linecap: round;
 }
+
+@media (max-width: 990px) {
+  .test {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .resetButton {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  .imgContainer {
+    width: 200px;
+  }
+  .circleContainer, .circleLabel {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 685px) {
+  .test {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .result2 {
+    margin-top: 365px;
+  }
+  main {
+    min-height: 178.2vh;
+  }
+}
+
+@media (max-width: 562px) {
+  .winnerTitle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .winnerTitle P {
+    text-align: center;
+  }
+  h3 {
+    border-bottom: 5px solid #DFC21A;
+  }
+  main {
+    min-height: 180vh;
+  }
+}
+
+@media (max-width: 562px) and (max-width: 385px) {
+  main {
+    min-height: 201vh;
+  }
+}

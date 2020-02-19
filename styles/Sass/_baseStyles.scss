@@ -185,3 +185,55 @@ button {
     stroke-width: 7px;
     stroke-linecap: round;
 }
+
+@media(max-width:990px){
+    .test {
+        justify-content: space-between;
+        padding:0 2rem
+    }
+}
+
+@media(max-width:800px){
+    .resetButton{
+        transform: translateY(50px)
+    }
+    .imgContainer {
+        width: 200px;
+    }
+    .circleContainer, .circleLabel  {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media(max-width: 685px){
+    .test{
+        flex-direction: column;
+
+    }
+    .result2{
+        margin-top:365px
+    }
+    main{
+        min-height:178.2vh;
+    }
+}
+@media(max-width:562px){
+    .winnerTitle{
+        flex-direction: column;
+    }
+    .winnerTitle P{
+        text-align: center;
+    }
+    h3{
+        border-bottom: 5px solid #DFC21A;
+    }
+    main{
+        min-height:180vh;
+    }
+
+@media(max-width: 385px){
+    main{
+        min-height:201vh;
+    }
+}
+}
