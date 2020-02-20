@@ -296,7 +296,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin: 0;
 }
 
@@ -306,11 +306,6 @@ h2, h3 {
 
 p, select, option, button {
   font-size: 2rem;
-}
-
-.resetButton {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
 }
 
 .background {
@@ -342,22 +337,32 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 15.2vh;
+  min-height: 15vh;
 }
 
 main {
-  min-height: 76.7vh;
+  min-height: calc(85vh - 30px);
 }
 
 footer {
-  min-height: 25px;
+  height: 30px;
   text-align: center;
   background: #DFC21A;
   color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer p {
   font-weight: bold;
+  line-height: 1;
 }
 
 button {
@@ -368,9 +373,10 @@ button {
 }
 
 .instructionContainer {
-  width: 700px;
-  margin: 35px auto;
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
+  padding-bottom: 18vh;
 }
 
 .test {
@@ -387,20 +393,22 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .flexContainerTop {
-  margin-bottom: 160px;
-  margin-top: 105px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 22vh;
 }
 
 .flexContainerBottom {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .buttonContainer {
@@ -413,6 +421,11 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.resetButton {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 
 .resultContainer {
@@ -436,12 +449,24 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.winnerTitle p {
+  text-align: center;
+}
+
+.winnerTitle h3 {
+  border-bottom: 5px solid #DFC21A;
 }
 
 .circleContainer {
@@ -483,12 +508,30 @@ button {
   stroke-linecap: round;
 }
 
+@media (max-width: 1100px) {
+  .flexContainerTop {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 7%;
+  }
+}
+
 @media (max-width: 990px) {
   .test {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 2rem;
+  }
+}
+
+@media (max-width: 870px) {
+  .background {
+    background-position: 48%;
+  }
+  .flexContainerTop {
+    margin: 0 4%;
   }
 }
 
@@ -506,41 +549,98 @@ button {
   }
 }
 
-@media (max-width: 685px) {
+@media (max-width: 720px) {
+  .background {
+    background-image: url("../assets/backgroundMobile.jpg");
+    background-position: center;
+  }
+  main {
+    min-height: 110vh;
+  }
+  .flexContainerTop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 10vh;
+  }
+  .instructionContainer {
+    max-width: 420px;
+  }
+  .superhero1Container {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  .superhero2Container {
+    -webkit-transform: translateY(226px);
+            transform: translateY(226px);
+  }
+  .battleContainer {
+    -webkit-transform: translateY(230px);
+            transform: translateY(230px);
+    padding: 0;
+  }
+  .battleButton {
+    -webkit-transform: translateY(225px);
+            transform: translateY(225px);
+  }
+  .winnerTitle {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   .test {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 25px;
   }
   .result2 {
-    margin-top: 365px;
-  }
-  main {
-    min-height: 178.2vh;
+    padding-top: 441px;
   }
 }
 
-@media (max-width: 562px) {
-  .winnerTitle {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+@media (max-width: 530px) {
+  h1 {
+    font-size: 4rem;
   }
-  .winnerTitle P {
-    text-align: center;
+  h2 {
+    font-size: 3rem;
   }
-  h3 {
-    border-bottom: 5px solid #DFC21A;
+  .superhero1Container {
+    -webkit-transform: translateY(-37px);
+            transform: translateY(-37px);
   }
-  main {
-    min-height: 180vh;
+  .superhero2Container {
+    -webkit-transform: translateY(225px);
+            transform: translateY(225px);
   }
 }
 
-@media (max-width: 562px) and (max-width: 385px) {
+@media (max-width: 422px) {
   main {
-    min-height: 201vh;
+    min-height: 120vh;
+  }
+  .instructionContainer {
+    margin-top: 25px;
+    max-width: 300px;
+  }
+  .superhero1Container {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  .superhero2Container {
+    -webkit-transform: translateY(217px);
+            transform: translateY(217px);
+  }
+}
+
+@media (max-width: 360px) {
+  footer {
+    height: 50px;
+    padding: 5px 0;
+  }
+  footer p {
+    line-height: 1.3;
   }
 }

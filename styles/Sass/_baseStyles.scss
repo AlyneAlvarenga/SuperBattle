@@ -31,7 +31,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin: 0;
 }
 
@@ -44,12 +44,7 @@ p, select, option, button {
     font-size: 2rem;
 }
 
-.resetButton{
-    transform: translateY(-50px)
-}
-
-//! My styles
-
+//setting up one background for header + main
 .background {
     background-image: url('../assets/background.jpg');
     background-size: cover;
@@ -73,22 +68,24 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 15.2vh;
+    min-height: 15vh;
 }
 
 main {
-    min-height: 76.7vh;
+    min-height: calc(85vh - 30px);
 }
 
 footer {
-    min-height: 25px;
+    height: 30px;
     text-align: center;
-    // background: linear-gradient(90deg, rgba(2,79,218,1) 6%, rgba(0,102,226,1) 37%, rgba(189,16,10,1) 66%, rgba(154,6,4,1) 100%);
-    // background: white;
     background: #DFC21A;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     p {
         font-weight: bold;
+        line-height: 1;
     }
 }
 
@@ -100,9 +97,10 @@ button {
 }
 
 .instructionContainer {
-    width: 700px;
-    margin: 35px auto;
+    max-width: 700px;
+    margin: 0 auto;
     text-align: center;
+    padding-bottom: 18vh;
 }
 
 .test {
@@ -112,30 +110,31 @@ button {
 
 .htmlToAppend {
     display: none;
-    // position: relative;
-    // margin-bottom: 2rem;
 }
 
 .flexContainerTop, .flexContainerBottom {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-
 }
 
 .flexContainerTop {
-    margin-bottom: 160px;
-    margin-top: 105px;
+    justify-content: space-around;
+    padding-bottom: 22vh;
 }
 
 .flexContainerBottom {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
 }
 
 .buttonContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.resetButton{
+    transform: translateY(-50px)
 }
 
 .resultContainer {
@@ -148,8 +147,15 @@ button {
 
 .winnerTitle {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    p {
+        text-align: center;
+    }
+    h3{
+        border-bottom: 5px solid #DFC21A;
+    }
 }
 
 //drawing the circles
@@ -159,6 +165,7 @@ button {
     position: relative;
 }
 
+// drawing labels inside the circles
 .circleLabel {
     position: absolute;
     width: 150px;
@@ -170,26 +177,50 @@ button {
     font-size: 2.5rem;
 }
 
-    .svgGroup {
+//making it so we can see the inside of the circle
+.svgGroup {
     fill: none;
     stroke: none;
 }
 
-    .baseCircle {
+//the circle that represents 100%
+.baseCircle {
     stroke-width: 7px;
     stroke: grey;
 }
 
-    .secondCircleHero1, .secondCircleHero2 {
+//this will represent the percentage of the powerstat
+.secondCircleHero1, .secondCircleHero2 {
     stroke: white;
     stroke-width: 7px;
     stroke-linecap: round;
+}
+
+
+//MEDIA QUERIES
+
+@media (max-width: 1100px) {
+
+    .flexContainerTop {
+        justify-content: space-between;
+        margin: 0 7%;
+    }
 }
 
 @media(max-width:990px){
     .test {
         justify-content: space-between;
         padding:0 2rem
+    }
+}
+
+@media (max-width: 870px) {
+    .background {
+        background-position: 48%;
+    }
+
+    .flexContainerTop {
+        margin: 0 4%;
     }
 }
 
@@ -205,35 +236,105 @@ button {
         height: 100px;
     }
 }
-@media(max-width: 685px){
+
+@media(max-width: 720px) {
+    .background {
+        background-image: url('../assets/backgroundMobile.jpg');
+        // background: linear-gradient(130deg, rgba(180,58,82,1) 44%, rgba(29,50,253,1) 66%, rgba(69,83,252,1) 100%);
+        background-position: center;
+    }
+
+    main {
+        min-height: 110vh;
+    }
+    
+    .flexContainerTop {
+        flex-direction: column;
+        padding-bottom: 10vh;
+    }
+    
+    .instructionContainer {
+        max-width: 420px;
+    }
+
+    .superhero1Container {
+        transform: translateY(-40px);
+    }
+
+    .superhero2Container {
+        transform: translateY(226px);
+    }
+
+    .battleContainer {
+        transform: translateY(230px);
+        padding: 0;
+    }
+
+    .battleButton {
+        transform: translateY(225px);
+    }
+
+    //
+
+    .winnerTitle {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
     .test{
         flex-direction: column;
-
+        padding-top: 25px;
     }
+
     .result2{
-        margin-top:365px
-    }
-    main{
-        min-height:178.2vh;
+        padding-top: 441px;
     }
 }
-@media(max-width:562px){
-    .winnerTitle{
-        flex-direction: column;
-    }
-    .winnerTitle P{
-        text-align: center;
-    }
-    h3{
-        border-bottom: 5px solid #DFC21A;
-    }
-    main{
-        min-height:180vh;
+
+
+@media(max-width: 530px) {
+    h1 {
+        font-size: 4rem;
     }
 
-@media(max-width: 385px){
-    main{
-        min-height:201vh;
+    h2 {
+        font-size: 3rem;
+    }
+
+    .superhero1Container {
+        transform: translateY(-37px);
+    }
+
+    .superhero2Container {
+        transform: translateY(225px);
     }
 }
+
+@media(max-width: 422px) {
+    main {
+        min-height: 120vh;
+    }
+
+    .instructionContainer {
+        margin-top: 25px;
+        max-width: 300px;
+    }
+
+    .superhero1Container {
+        transform: translateY(-80px);
+    }
+
+    .superhero2Container {
+        transform: translateY(217px);
+    }
+}
+
+@media(max-width: 360px) {
+    footer {
+        height: 50px;
+        padding: 5px 0;
+        p {
+            line-height: 1.3;
+        }
+    }
 }
