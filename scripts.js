@@ -146,8 +146,6 @@ const circleDasharray1 = `${(superHeroApp.calculatePercentage(num1).toFixed(0))}
 superHeroApp.whoIsWinner = function() {
     const chosenBattle = superHeroApp.powerStats[2].selection;
 
-    //will change which div this appends to, because we want this at the top
-    //use .winnerContainer was using .test
     $('.winnerContainer').append(`
     <div class="winnerTitle">
         <p>The winner of the battle of ${chosenBattle} is...<p>
@@ -162,15 +160,12 @@ superHeroApp.whoIsWinner = function() {
     superHeroApp.drawCircles(hero1Num, hero2Num);
 
     if (hero1Num > hero2Num) {
-        console.log('Hero 1 wins');
         $('div.winnerTitle').append(`<h3>${superHeroApp.powerStats[0].name}</h3>`);
 
     } else if (hero2Num > hero1Num) {
-        console.log('Hero 2 wins');
         $('div.winnerTitle').append(`<h3>${superHeroApp.powerStats[1].name}</h3>`);
 
     } else if (hero1Num === hero2Num) {
-        console.log(`It's a tie`);
         $('div.winnerTitle').append(`<h3>Both! It's a tie!</h3>`);
     }
 }
@@ -184,12 +179,10 @@ superHeroApp.battleButton.on('click', function () {
     if ($(window).width() <= 720) {
         $('main').css('min-height', '205vh');
     }
-
     superHeroApp.whoIsWinner();
     superHeroApp.battleButton.css('display', 'none');
     superHeroApp.resetButton.css('display', 'block');
 
-    
     })
 }
 
@@ -210,7 +203,6 @@ superHeroApp.resetButton.on('click', function () {
     superHeroApp.superhero1.prop('selectedIndex', 0);
     superHeroApp.superhero2.prop('selectedIndex', 0);
     superHeroApp.typeOfBattle.prop('selectedIndex', 0);
-    //!the last selected options are still on the select element; the problem with that is, if the user only changes one or two of the options, it doesn't work properly. need a hard refresh of the page? or somehow reset the selects? Solved it maybe with .prop
 })
 
 superHeroApp.init = function(){
