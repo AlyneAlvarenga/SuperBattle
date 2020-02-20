@@ -308,11 +308,6 @@ p, select, option, button {
   font-size: 2rem;
 }
 
-.resetButton {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
-}
-
 .background {
   background-image: url("../assets/background.jpg");
   background-size: cover;
@@ -342,22 +337,32 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 15.2vh;
+  min-height: 15vh;
 }
 
 main {
-  min-height: 76.7vh;
+  min-height: calc(85vh - 30px);
 }
 
 footer {
-  min-height: 25px;
+  height: 30px;
   text-align: center;
   background: #DFC21A;
   color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer p {
   font-weight: bold;
+  line-height: 1;
 }
 
 button {
@@ -367,9 +372,18 @@ button {
   padding: 12px 25px;
 }
 
+.topSection {
+  max-height: 40%;
+  padding-bottom: 18vh;
+}
+
+.bottomSection {
+  max-height: 60%;
+}
+
 .instructionContainer {
-  width: 700px;
-  margin: 35px auto;
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -387,20 +401,22 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .flexContainerTop {
-  margin-bottom: 160px;
-  margin-top: 105px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 22vh;
 }
 
 .flexContainerBottom {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .buttonContainer {
@@ -413,6 +429,11 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.resetButton {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 
 .resultContainer {
@@ -483,12 +504,30 @@ button {
   stroke-linecap: round;
 }
 
+@media (max-width: 1100px) {
+  .flexContainerTop {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 7%;
+  }
+}
+
 @media (max-width: 990px) {
   .test {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 2rem;
+  }
+}
+
+@media (max-width: 870px) {
+  .background {
+    background-position: 48%;
+  }
+  .flexContainerTop {
+    margin: 0 4%;
   }
 }
 
@@ -503,6 +542,43 @@ button {
   .circleContainer, .circleLabel {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media (max-width: 720px) {
+  .background {
+    background: linear-gradient(130deg, #b43a52 44%, #1d32fd 66%, #4553fc 100%);
+  }
+  .flexContainerTop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 10vh;
+  }
+  .topSection {
+    padding-top: 5vh;
+    padding-bottom: 15vh;
+  }
+  .instructionContainer {
+    max-width: 420px;
+  }
+  .superhero1Container {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+  .superhero2Container {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  .flexContainerBottom {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    padding: 0;
+  }
+  .battleButton {
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
   }
 }
 
@@ -536,6 +612,27 @@ button {
   }
   main {
     min-height: 180vh;
+  }
+}
+
+@media (max-width: 562px) and (max-width: 530px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 562px) and (max-width: 420px) {
+  .instructionContainer {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 562px) and (max-width: 360px) {
+  footer {
+    height: 45px;
   }
 }
 
