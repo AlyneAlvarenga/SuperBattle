@@ -181,7 +181,6 @@ superHeroApp.battleButton.on('click', function () {
     superHeroApp.flexContainer.css('display', 'none');
     $('.winnerContainer').css('display', 'block');
     $('.test').css('display', 'flex');
-    $('main').css('height', '81.2vh');
     if ($(window).width() <= 720) {
         $('main').css('min-height', '205vh');
     }
