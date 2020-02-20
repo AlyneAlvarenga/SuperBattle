@@ -175,7 +175,7 @@ superHeroApp.battleButton.on('click', function () {
     superHeroApp.instructionContainer.css('display', 'none');
     superHeroApp.flexContainer.css('display', 'none');
     $('.winnerContainer').css('display', 'block');
-    $('.test').css('display', 'flex');
+    $('.result').css('display', 'flex');
     if ($(window).width() <= 720) {
         $('main').css('min-height', '205vh');
     }
@@ -190,7 +190,7 @@ superHeroApp.resetButton.on('click', function () {
 
     $('.result1').children().remove();
     $('.result2').children().remove();
-    $('.test').css('display', 'none');
+    $('.result').css('display', 'none');
     $('.winnerContainer').children().remove();
     superHeroApp.instructionContainer.css('display', 'block');
     superHeroApp.flexContainer.css('display', 'flex');

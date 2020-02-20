@@ -111,7 +111,7 @@ select:focus, button:focus {
     padding-bottom: 18vh;
 }
 
-.test {
+.result {
     display: none;
     justify-content: space-around;
 }
@@ -216,7 +216,7 @@ select:focus, button:focus {
 }
 
 @media(max-width:990px){
-    .test {
+    .result {
         justify-content: space-between;
         padding:0 2rem
     }
@@ -289,7 +289,7 @@ select:focus, button:focus {
         padding-bottom: 30px;
     }
 
-    .test{
+    .result{
         flex-direction: column;
         padding-top: 25px;
     }
