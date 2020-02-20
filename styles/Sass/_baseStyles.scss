@@ -5,6 +5,7 @@ html {
     color: white;
 }
 
+// clears margin and padding styling 
 body,
 h1,
 h2,
@@ -205,7 +206,7 @@ select:focus, button:focus {
 }
 
 
-//MEDIA QUERIES
+//MEDIA QUERIES for  1100px
 
 @media (max-width: 1100px) {
 
@@ -215,6 +216,7 @@ select:focus, button:focus {
     }
 }
 
+//MEDIA QUERIES for 990px
 @media(max-width:990px){
     .result {
         justify-content: space-between;
@@ -222,6 +224,7 @@ select:focus, button:focus {
     }
 }
 
+//MEDIA QUERIES for 870px
 @media (max-width: 870px) {
     .background {
         background-position: 48%;
@@ -232,6 +235,7 @@ select:focus, button:focus {
     }
 }
 
+//MEDIA QUERIES for 800px
 @media(max-width:800px){
     .resetButton{
         transform: translateY(50px)
@@ -245,6 +249,7 @@ select:focus, button:focus {
     }
 }
 
+//MEDIA QUERIES for 720px
 @media(max-width: 720px) {
     .background {
         background-image: url('../assets/backgroundMobile.jpg');
@@ -299,7 +304,7 @@ select:focus, button:focus {
     }
 }
 
-
+//MEDIA QUERIES for 530px
 @media(max-width: 530px) {
     h1 {
         font-size: 4rem;
@@ -318,6 +323,7 @@ select:focus, button:focus {
     }
 }
 
+//MEDIA QUERIES for 422px
 @media(max-width: 422px) {
     main {
         min-height: 120vh;
@@ -337,6 +343,7 @@ select:focus, button:focus {
     }
 }
 
+//MEDIA QUERIES for 360px
 @media(max-width: 360px) {
     footer {
         height: 50px;

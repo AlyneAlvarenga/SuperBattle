@@ -13,11 +13,14 @@
 <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
 
 <body>
+<!--Header begins here.-->
     <div class="background">
         <header>
             <h1>Super battle</h1>
         </header>
+<!--Main section begins here.-->
         <main>
+<!-- Top section for instructions. -->
             <section class="topSection">
                 <div class="instructionContainer">
                     <h2>Instructions</h2>
@@ -26,10 +29,12 @@
                 </div>
                 <div class="htmlToAppend winnerContainer"> </div>
             </section>
+<!-- Bottom section for main content.-->
             <section class="bottomSection">
                 <div class="flexContainerTop flexContainer">
                     <div class="superhero1Container">
                         <label for="superhero1" class="visuallyHidden">Select the first champion.</label>
+<!-- First superhero selection.-->
                         <select name="" id="superhero1">
                             <option value="">Select champion 1</option>
                             <option value="717">Wolverine </option>
@@ -60,6 +65,7 @@
                     </div>
                     <div class="superhero2Container">
                         <label for="superhero2" class="visuallyHidden">Select the second champion.</label>
+<!-- Second superhero selection.-->
                         <select name="" id="superhero2">
                             <option value="0">Select champion 2</option>
                             <option value="226">Doctor Strange</option>
@@ -91,11 +97,12 @@
                         </select>
                     </div>
                 </div>
-                <!--end of flexContainerTop-->
+<!--Bottom half of screen.-->
                 <div class="flexContainerBottom flexContainer">
                     <div class="battleContainer">
                         <label for="battleCondition" class="visuallyHidden">Select the battle condition.
                         </label>
+<!-- Battle condition selection -->
                         <select name="" id="battleCondition">
                             <option value="">Select a battle</option>
                             <option value="intelligence">Battle of Wits</option>
@@ -105,13 +112,14 @@
                         </select>
                     </div>
                 </div>
-                <!--end of flexContainerBottom-->
+<!--Area for html to be appended.-->
                 <div class="htmlToAppend result">
                     <div class="result1">
                     </div>
                     <div class="result2">
                     </div>
                 </div>
+<!-- Buttons.-->
                 <div class="buttonContainer">
                     <button class="battleButton">Battle</button>
                     <button class="htmlToAppend resetButton">Try Again</button>
@@ -119,13 +127,15 @@
             </section>
         </main>
     </div>
+<!-- End of main section.-->
+<!-- Footer begins.-->
     <footer>
         <p>Alyne Alvarenga & Opjot Nijjar &#169 2020</p>
     </footer>
+<!--Javascript-->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'
         integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'>
         </script>
     <script src="./scripts.js"></script>
 </body>
-
 </html>
