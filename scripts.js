@@ -16,18 +16,21 @@ superHeroApp.userSelection1 = '';
 superHeroApp.userSelection2 = '';
 superHeroApp.userSelection3 = '';
 
+//where we store the info on each API call
 superHeroApp.powerStats = [
     {
         name: '',
         intelligence: 0,
         speed: 0,
-        combat: 0
+        combat: 0,
+        strength: 0,
     },
     {
         name: '',
         intelligence: 0,
         speed: 0,
-        combat: 0
+        combat: 0,
+        strength: 0,
     },
     { selection: '' },
 ];
@@ -70,6 +73,7 @@ superHeroApp.superhero1.on('change', function () {
         superHeroApp.powerStats[0].intelligence = result.powerstats.intelligence;
         superHeroApp.powerStats[0].speed = result.powerstats.speed;
         superHeroApp.powerStats[0].combat = result.powerstats.combat;
+        superHeroApp.powerStats[0].strength = result.powerstats.strength;
         })
     })
 }
@@ -112,6 +116,7 @@ superHeroApp.player2 = function(){
             superHeroApp.powerStats[1].intelligence = result.powerstats.intelligence;
             superHeroApp.powerStats[1].speed = result.powerstats.speed;
             superHeroApp.powerStats[1].combat = result.powerstats.combat;
+            superHeroApp.powerStats[1].strength = result.powerstats.strength;
         })
     })
 }
