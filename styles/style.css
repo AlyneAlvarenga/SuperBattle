@@ -370,6 +370,17 @@ button {
   border-radius: 15px;
   background-color: #DFC21A;
   padding: 12px 25px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+button:hover {
+  background-color: white;
+}
+
+select:focus, button:focus {
+  -webkit-box-shadow: 0 0 8px 3px black;
+          box-shadow: 0 0 8px 3px black;
 }
 
 .instructionContainer {
