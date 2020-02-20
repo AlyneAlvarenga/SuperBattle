@@ -296,7 +296,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin: 0;
 }
 
@@ -372,19 +372,11 @@ button {
   padding: 12px 25px;
 }
 
-.topSection {
-  max-height: 40%;
-  padding-bottom: 18vh;
-}
-
-.bottomSection {
-  max-height: 60%;
-}
-
 .instructionContainer {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 18vh;
 }
 
 .test {
@@ -457,12 +449,24 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.winnerTitle p {
+  text-align: center;
+}
+
+.winnerTitle h3 {
+  border-bottom: 5px solid #DFC21A;
 }
 
 .circleContainer {
@@ -547,7 +551,11 @@ button {
 
 @media (max-width: 720px) {
   .background {
-    background: linear-gradient(130deg, #b43a52 44%, #1d32fd 66%, #4553fc 100%);
+    background-image: url("../assets/backgroundMobile.jpg");
+    background-position: center;
+  }
+  main {
+    min-height: 110vh;
   }
   .flexContainerTop {
     -webkit-box-orient: vertical;
@@ -556,88 +564,83 @@ button {
             flex-direction: column;
     padding-bottom: 10vh;
   }
-  .topSection {
-    padding-top: 5vh;
-    padding-bottom: 15vh;
-  }
   .instructionContainer {
     max-width: 420px;
   }
   .superhero1Container {
-    -webkit-transform: translateY(-70px);
-            transform: translateY(-70px);
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
   }
   .superhero2Container {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    -webkit-transform: translateY(226px);
+            transform: translateY(226px);
   }
-  .flexContainerBottom {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+  .battleContainer {
+    -webkit-transform: translateY(230px);
+            transform: translateY(230px);
     padding: 0;
   }
   .battleButton {
-    -webkit-transform: translateY(80px);
-            transform: translateY(80px);
+    -webkit-transform: translateY(225px);
+            transform: translateY(225px);
   }
-}
-
-@media (max-width: 685px) {
+  .winnerTitle {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   .test {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 25px;
   }
   .result2 {
-    margin-top: 365px;
-  }
-  main {
-    min-height: 178.2vh;
+    padding-top: 441px;
   }
 }
 
-@media (max-width: 562px) {
-  .winnerTitle {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .winnerTitle P {
-    text-align: center;
-  }
-  h3 {
-    border-bottom: 5px solid #DFC21A;
-  }
-  main {
-    min-height: 180vh;
-  }
-}
-
-@media (max-width: 562px) and (max-width: 530px) {
+@media (max-width: 530px) {
   h1 {
     font-size: 4rem;
   }
   h2 {
     font-size: 3rem;
   }
+  .superhero1Container {
+    -webkit-transform: translateY(-37px);
+            transform: translateY(-37px);
+  }
+  .superhero2Container {
+    -webkit-transform: translateY(225px);
+            transform: translateY(225px);
+  }
 }
 
-@media (max-width: 562px) and (max-width: 420px) {
+@media (max-width: 422px) {
+  main {
+    min-height: 120vh;
+  }
   .instructionContainer {
+    margin-top: 25px;
     max-width: 300px;
   }
-}
-
-@media (max-width: 562px) and (max-width: 360px) {
-  footer {
-    height: 45px;
+  .superhero1Container {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  .superhero2Container {
+    -webkit-transform: translateY(217px);
+            transform: translateY(217px);
   }
 }
 
-@media (max-width: 562px) and (max-width: 385px) {
-  main {
-    min-height: 201vh;
+@media (max-width: 360px) {
+  footer {
+    height: 50px;
+    padding: 5px 0;
+  }
+  footer p {
+    line-height: 1.3;
   }
 }

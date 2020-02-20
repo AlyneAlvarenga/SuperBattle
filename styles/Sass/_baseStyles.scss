@@ -31,7 +31,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin: 0;
 }
 
@@ -96,23 +96,11 @@ button {
     padding: 12px 25px;
 }
 
-//stopping the scroll on main page
-.topSection {
-    max-height: 40%;
-    // padding-bottom: 167px;
-    padding-bottom: 18vh;
-
-}
-
-//stopping the scroll on main page
-.bottomSection {
-    max-height: 60%;
-}
-
 .instructionContainer {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 18vh;
 }
 
 .test {
@@ -159,8 +147,15 @@ button {
 
 .winnerTitle {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    p {
+        text-align: center;
+    }
+    h3{
+        border-bottom: 5px solid #DFC21A;
+    }
 }
 
 //drawing the circles
@@ -205,6 +200,7 @@ button {
 //MEDIA QUERIES
 
 @media (max-width: 1100px) {
+
     .flexContainerTop {
         justify-content: space-between;
         margin: 0 7%;
@@ -243,18 +239,18 @@ button {
 
 @media(max-width: 720px) {
     .background {
-        // background-image: url('../assets/background2.jpg');
-        background: linear-gradient(130deg, rgba(180,58,82,1) 44%, rgba(29,50,253,1) 66%, rgba(69,83,252,1) 100%);
+        background-image: url('../assets/backgroundMobile.jpg');
+        // background: linear-gradient(130deg, rgba(180,58,82,1) 44%, rgba(29,50,253,1) 66%, rgba(69,83,252,1) 100%);
+        background-position: center;
+    }
+
+    main {
+        min-height: 110vh;
     }
     
     .flexContainerTop {
         flex-direction: column;
         padding-bottom: 10vh;
-    }
-
-    .topSection {
-        padding-top: 5vh;
-        padding-bottom: 15vh;
     }
     
     .instructionContainer {
@@ -262,49 +258,38 @@ button {
     }
 
     .superhero1Container {
-        transform: translateY(-70px);
+        transform: translateY(-40px);
     }
 
     .superhero2Container {
-        transform: translateY(30px);
+        transform: translateY(226px);
     }
 
-    .flexContainerBottom {
-        transform: translateY(30px);
+    .battleContainer {
+        transform: translateY(230px);
         padding: 0;
     }
 
     .battleButton {
-        transform: translateY(80px);
+        transform: translateY(225px);
     }
-}
 
-@media(max-width: 685px){
+    //
+
+    .winnerTitle {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
     .test{
         flex-direction: column;
+        padding-top: 25px;
+    }
 
-    }
     .result2{
-        margin-top:365px
-    }
-    main{
-        min-height:178.2vh;
+        padding-top: 441px;
     }
 }
-
-@media(max-width:562px){
-    .winnerTitle{
-        flex-direction: column;
-    }
-    .winnerTitle P{
-        text-align: center;
-    }
-    h3{
-        border-bottom: 5px solid #DFC21A;
-    }
-    main{
-        min-height:180vh;
-    }
 
 
 @media(max-width: 530px) {
@@ -315,23 +300,41 @@ button {
     h2 {
         font-size: 3rem;
     }
+
+    .superhero1Container {
+        transform: translateY(-37px);
+    }
+
+    .superhero2Container {
+        transform: translateY(225px);
+    }
 }
 
-@media(max-width: 420px) {
+@media(max-width: 422px) {
+    main {
+        min-height: 120vh;
+    }
+
     .instructionContainer {
+        margin-top: 25px;
         max-width: 300px;
+    }
+
+    .superhero1Container {
+        transform: translateY(-80px);
+    }
+
+    .superhero2Container {
+        transform: translateY(217px);
     }
 }
 
 @media(max-width: 360px) {
     footer {
-        height: 45px;
+        height: 50px;
+        padding: 5px 0;
+        p {
+            line-height: 1.3;
+        }
     }
-}
-
-@media(max-width: 385px){
-    main{
-        min-height:201vh;
-    }
-}
 }
