@@ -175,10 +175,6 @@ superHeroApp.whoIsWinner = function() {
         hero2Num = grandBattle(superHeroApp.powerStats[1]);
     } else {
         const hero1 = superHeroApp.powerStats[0][chosenBattle.toLowerCase()];
-        console.log(superHeroApp.powerStats[0]);
-        console.log(chosenBattle);
-        
-        
         hero1Num = parseInt(hero1);
         const hero2 = superHeroApp.powerStats[1][chosenBattle.toLowerCase()];
         hero2Num = parseInt(hero2);
