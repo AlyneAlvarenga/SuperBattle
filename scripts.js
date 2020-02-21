@@ -41,11 +41,11 @@ superHeroApp.player1 = function(){
         superHeroApp.userSelection1 = superHeroApp.superhero1.val();
 
         $.ajax({
-            url: 'http://proxy.hackeryou.com',
+            url: 'https://proxy.hackeryou.com',
             method: 'GET',
             dataType: 'json',
             data: {
-                reqUrl: `http://superheroapi.com/api/2827401063977440/${superHeroApp.userSelection1}`
+                reqUrl: `https://superheroapi.com/api/2827401063977440/${superHeroApp.userSelection1}`
             }
         }).then(function (result) {
             const htmlToAppend = `
@@ -88,11 +88,11 @@ superHeroApp.player2 = function(){
         superHeroApp.userSelection2 = superHeroApp.superhero2.val();
 
         $.ajax({
-            url: 'http://proxy.hackeryou.com',
+            url: 'https://proxy.hackeryou.com',
             method: 'GET',
             dataType: 'json',
             data: {
-                reqUrl: `http://superheroapi.com/api/2827401063977440/${superHeroApp.userSelection2}`
+                reqUrl: `https://superheroapi.com/api/2827401063977440/${superHeroApp.userSelection2}`
             }
         }).then(function (result) {
             const htmlToAppend = `
