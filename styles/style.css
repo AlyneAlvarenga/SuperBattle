@@ -571,7 +571,7 @@ select:focus, button:focus {
     background-position: center;
   }
   main {
-    min-height: 135vh;
+    min-height: 130vh;
   }
   .flexContainerTop {
     -webkit-box-orient: vertical;

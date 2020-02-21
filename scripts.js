@@ -214,7 +214,7 @@ superHeroApp.button = function(){
         $('.winnerContainer').css('display', 'block');
         $('.result').css('display', 'flex');
         if ($(window).width() <= 720) {
-            $('main').css('min-height', '265vh');
+            $('main').css('min-height', '260vh');
 
         }
         superHeroApp.whoIsWinner();
@@ -236,7 +236,7 @@ superHeroApp.resetButton.on('click', function () {
     superHeroApp.battleButton.css('display', 'flex');
     superHeroApp.resetButton.css('display', 'none');
     if ($(window).width() <= 720) {
-        $('main').css('min-height', '135vh');
+        $('main').css('min-height', '130vh');
     }
     //https://stackoverflow.com/questions/10502093/how-to-reset-a-select-element-with-jquery
     superHeroApp.superhero1.prop('selectedIndex', 0);
