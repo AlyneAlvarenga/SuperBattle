@@ -310,6 +310,7 @@ p, select, option, button {
 
 .wrapper {
   max-width: 1400px;
+  margin: 0 auto;
 }
 
 .background {
