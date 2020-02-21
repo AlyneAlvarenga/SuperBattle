@@ -214,7 +214,7 @@ superHeroApp.button = function(){
         $('.winnerContainer').css('display', 'block');
         $('.result').css('display', 'flex');
         if ($(window).width() <= 720) {
-            $('main').css('min-height', '245vh');
+            $('main').css('min-height', '265vh');
 
         }
         superHeroApp.whoIsWinner();

@@ -303,7 +303,7 @@ select:focus, button:focus {
     }
 
     .result2{
-        padding-top: 333px;
+        padding-top: 415px;
     }
 }
 
@@ -323,6 +323,18 @@ select:focus, button:focus {
 
     .superhero2Container {
         transform: translateY(225px);
+    }
+
+    .circleLabel {
+        font-size: 2rem;
+    }
+
+    footer {
+        height: 50px;
+        padding: 5px 0;
+        p {
+            line-height: 1.3;
+        }
     }
 }
 

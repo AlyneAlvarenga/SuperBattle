@@ -611,7 +611,7 @@ select:focus, button:focus {
             flex-direction: column;
   }
   .result2 {
-    padding-top: 333px;
+    padding-top: 415px;
   }
 }
 
@@ -629,6 +629,16 @@ select:focus, button:focus {
   .superhero2Container {
     -webkit-transform: translateY(225px);
             transform: translateY(225px);
+  }
+  .circleLabel {
+    font-size: 2rem;
+  }
+  footer {
+    height: 50px;
+    padding: 5px 0;
+  }
+  footer p {
+    line-height: 1.3;
   }
 }
 
