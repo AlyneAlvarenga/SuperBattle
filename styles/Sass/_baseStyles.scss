@@ -45,6 +45,10 @@ p, select, option, button {
     font-size: 2rem;
 }
 
+.wrapper{
+    max-width:1400px
+}
+
 //setting up one background for header + main
 .background {
     background-image: url('../assets/background.jpg');

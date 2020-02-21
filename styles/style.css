@@ -308,6 +308,10 @@ p, select, option, button {
   font-size: 2rem;
 }
 
+.wrapper {
+  max-width: 1400px;
+}
+
 .background {
   background-image: url("../assets/background.jpg");
   background-size: cover;

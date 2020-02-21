@@ -164,16 +164,32 @@ superHeroApp.whoIsWinner = function() {
 
     $('.winnerContainer').append(`
     <div class="winnerTitle">
-        <p>The winner of the battle of ${chosenBattle} is...<p>
+        <p>The winner of the ${chosenBattle} Battle is...<p>
             </div>`)
 
-    //pull that specific powerstat from our first object, and convert it to a number
-    const hero1 = superHeroApp.powerStats[0][chosenBattle];
-    const hero1Num = parseInt(hero1);
+        let hero1Num;
+        let hero2Num;
 
-    //pull that specific powerstat from our second object, and convert it to a number
-    const hero2 = superHeroApp.powerStats[1][chosenBattle];
-    const hero2Num = parseInt(hero2);
+    if (chosenBattle === 'Grand') {
+        hero1Num = grandBattle(superHeroApp.powerStats[0]);
+        hero2Num = grandBattle(superHeroApp.powerStats[1]);
+    } else {
+        const hero1 = superHeroApp.powerStats[0][chosenBattle];
+        hero1Num = parseInt(hero1);
+        const hero2 = superHeroApp.powerStats[1][chosenBattle];
+        hero2Num = parseInt(hero2);
+    }
+    function grandBattle(obj) {
+        //get the obj for the specific hero
+        // convert all powerstats to numbers
+        const first = parseInt(obj.intelligence);
+        const second = parseInt(obj.speed);
+        const third = parseInt(obj.combat);
+        const fourth = parseInt(obj.strength);
+        // add them up
+        return total = ((first + second + third + fourth) / 4).toFixed(0);
+        // divide them by four to get an average
+    }
 
     superHeroApp.drawCircles(hero1Num, hero2Num);
 
