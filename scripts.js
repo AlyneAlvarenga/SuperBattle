@@ -179,6 +179,7 @@ superHeroApp.whoIsWinner = function() {
         const hero2 = superHeroApp.powerStats[1][chosenBattle.toLowerCase()];
         hero2Num = parseInt(hero2);
     }
+
     function grandBattle(obj) {
         //get the obj for the specific hero
         // convert all powerstats to numbers
@@ -187,7 +188,7 @@ superHeroApp.whoIsWinner = function() {
         const third = parseInt(obj.combat);
         const fourth = parseInt(obj.strength);
         // add them up
-        return total = ((first + second + third + fourth) / 4).toFixed(0);
+        return total = ((first + second + third + fourth) / 4).toFixed(2);
         // divide them by four to get an average
     }
 
