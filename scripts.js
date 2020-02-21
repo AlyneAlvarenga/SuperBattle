@@ -45,7 +45,7 @@ superHeroApp.player1 = function(){
             method: 'GET',
             dataType: 'json',
             data: {
-                reqUrl: `https://superheroapi.com/api/2827401063977440/${superHeroApp.userSelection1}`
+                reqUrl: `http://superheroapi.com/api/2827401063977440/${superHeroApp.userSelection1}`
             }
         }).then(function (result) {
             const htmlToAppend = `
@@ -92,7 +92,7 @@ superHeroApp.player2 = function(){
             method: 'GET',
             dataType: 'json',
             data: {
-                reqUrl: `https://superheroapi.com/api/2827401063977440/${superHeroApp.userSelection2}`
+                reqUrl: `http://superheroapi.com/api/2827401063977440/${superHeroApp.userSelection2}`
             }
         }).then(function (result) {
             const htmlToAppend = `
