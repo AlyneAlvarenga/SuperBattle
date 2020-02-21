@@ -158,6 +158,18 @@ superHeroApp.drawCircles = function(num1, num2) {
     $('.circleLabelHero2').append(`${num2}%`);
 }
 
+superHeroApp.grandBattle = function(obj) {
+    //get the obj for the specific hero
+    // convert all powerstats to numbers
+    const first = parseInt(obj.intelligence);
+    const second = parseInt(obj.speed);
+    const third = parseInt(obj.combat);
+    const fourth = parseInt(obj.strength);
+    // add them up
+    return total = ((first + second + third + fourth) / 4).toFixed(2);
+    // divide them by four to get an average
+}
+
 superHeroApp.whoIsWinner = function() {
     //check which type of battle the user chose
     const chosenBattle = superHeroApp.powerStats[2].selection;
@@ -171,25 +183,13 @@ superHeroApp.whoIsWinner = function() {
         let hero2Num;
 
     if (chosenBattle === 'Grand') {
-        hero1Num = grandBattle(superHeroApp.powerStats[0]);
-        hero2Num = grandBattle(superHeroApp.powerStats[1]);
+        hero1Num = superHeroApp.grandBattle(superHeroApp.powerStats[0]);
+        hero2Num = superHeroApp.grandBattle(superHeroApp.powerStats[1]);
     } else {
         const hero1 = superHeroApp.powerStats[0][chosenBattle.toLowerCase()];
         hero1Num = parseInt(hero1);
         const hero2 = superHeroApp.powerStats[1][chosenBattle.toLowerCase()];
         hero2Num = parseInt(hero2);
-    }
-
-    function grandBattle(obj) {
-        //get the obj for the specific hero
-        // convert all powerstats to numbers
-        const first = parseInt(obj.intelligence);
-        const second = parseInt(obj.speed);
-        const third = parseInt(obj.combat);
-        const fourth = parseInt(obj.strength);
-        // add them up
-        return total = ((first + second + third + fourth) / 4).toFixed(2);
-        // divide them by four to get an average
     }
 
     superHeroApp.drawCircles(hero1Num, hero2Num);
@@ -214,7 +214,8 @@ superHeroApp.button = function(){
         $('.winnerContainer').css('display', 'block');
         $('.result').css('display', 'flex');
         if ($(window).width() <= 720) {
-            $('main').css('min-height', '205vh');
+            $('main').css('min-height', '245vh');
+
         }
         superHeroApp.whoIsWinner();
         superHeroApp.battleButton.css('display', 'none');
@@ -235,7 +236,7 @@ superHeroApp.resetButton.on('click', function () {
     superHeroApp.battleButton.css('display', 'flex');
     superHeroApp.resetButton.css('display', 'none');
     if ($(window).width() <= 720) {
-        $('main').css('min-height', '110vh');
+        $('main').css('min-height', '135vh');
     }
     //https://stackoverflow.com/questions/10502093/how-to-reset-a-select-element-with-jquery
     superHeroApp.superhero1.prop('selectedIndex', 0);

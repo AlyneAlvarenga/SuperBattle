@@ -571,7 +571,7 @@ select:focus, button:focus {
     background-position: center;
   }
   main {
-    min-height: 110vh;
+    min-height: 135vh;
   }
   .flexContainerTop {
     -webkit-box-orient: vertical;
@@ -609,10 +609,9 @@ select:focus, button:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 25px;
   }
   .result2 {
-    padding-top: 441px;
+    padding-top: 333px;
   }
 }
 
@@ -634,9 +633,6 @@ select:focus, button:focus {
 }
 
 @media (max-width: 422px) {
-  main {
-    min-height: 120vh;
-  }
   .instructionContainer {
     margin-top: 25px;
     max-width: 300px;

@@ -225,7 +225,7 @@ select:focus, button:focus {
 @media(max-width:990px){
     .result {
         justify-content: space-between;
-        padding:0 2rem
+        padding: 0 2rem;
     }
 }
 
@@ -258,12 +258,11 @@ select:focus, button:focus {
 @media(max-width: 720px) {
     .background {
         background-image: url('../assets/backgroundMobile.jpg');
-        // background: linear-gradient(130deg, rgba(180,58,82,1) 44%, rgba(29,50,253,1) 66%, rgba(69,83,252,1) 100%);
         background-position: center;
     }
 
     main {
-        min-height: 110vh;
+        min-height: 135vh;
     }
     
     .flexContainerTop {
@@ -301,11 +300,10 @@ select:focus, button:focus {
 
     .result{
         flex-direction: column;
-        padding-top: 25px;
     }
 
     .result2{
-        padding-top: 441px;
+        padding-top: 333px;
     }
 }
 
@@ -330,9 +328,6 @@ select:focus, button:focus {
 
 //MEDIA QUERIES for 422px
 @media(max-width: 422px) {
-    main {
-        min-height: 120vh;
-    }
 
     .instructionContainer {
         margin-top: 25px;
