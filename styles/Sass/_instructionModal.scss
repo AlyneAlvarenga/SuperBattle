@@ -1,0 +1,61 @@
+.instructionModal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.instructions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  padding: 1rem 4rem;
+  width: 35rem;
+  height: 40rem;
+  border-radius: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  li {
+    margin-bottom: 2rem;
+  }
+}
+
+.closeInstructions {
+  font-size: 2rem;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  background-color: var(--accentYellow);
+  transition: all 250ms;
+}
+
+.closeInstructions:hover {
+  background-color: black;
+  color: var(--accentYellow);
+}
+
+.showInstructions {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}

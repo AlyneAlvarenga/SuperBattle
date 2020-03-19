@@ -246,4 +246,22 @@ superHeroApp.init = function(){
 
 $(function() {
   superHeroApp.init();
+
+  const instructionModal = $('.instructionModal');
+  const toggleInstructions = $('.toggleInstructions');
+  const closeInstructions = $('.closeInstructions');
+
+  function toggleInstructionModal() {
+    instructionModal.toggleClass('showInstructions');
+  }
+
+  function mainWindowClick(e) {
+    if (e.target === instructionModal) {
+      toggleInstructionModal();
+    }
+  }
+
+  toggleInstructions.on('click', toggleInstructionModal);
+  closeInstructions.on('click', toggleInstructionModal);
+  $(window).on('click', mainWindowClick);
 });

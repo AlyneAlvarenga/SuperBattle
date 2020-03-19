@@ -23,9 +23,21 @@
         <!-- Top section for instructions -->
         <section class="topSection">
           <div class="instructionContainer">
-            <h2>Instructions</h2>
-            <p>Select 2 champions from the lists and select a condition of battle.</p>
-            <p>Click the button to to determine the winner.</p>
+            <button class="toggleInstructions">See Instructions</button>
+            <div class="instructionModal">
+              <div class="instructions">
+                <span class="closeInstructions">X</span>
+                <h2>Instructions</h2>
+                <ol>
+                  <li>Select two champions from the lists;</li>
+                  <li>Select a condition of battle;</li>
+                  <li>Click on "Battle" to see who the winner is!</li>
+                </ol>
+              </div>
+            </div>
+            <!-- <h2>Instructions</h2> -->
+            <!-- <p>Select 2 champions from the lists and select a condition of battle.</p>
+            <p>Click the button to to determine the winner.</p> -->
           </div>
           <div class="htmlToAppend winnerContainer"></div>
         </section>

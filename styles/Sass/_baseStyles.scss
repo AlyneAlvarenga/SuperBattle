@@ -47,7 +47,7 @@ h2, h3 {
   letter-spacing: 0.2rem;
 }
 
-p, select, option, button {
+p, select, option, button, li {
   font-size: 2rem;
 }
 
@@ -66,7 +66,7 @@ p, select, option, button {
 img {
   display: block;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 2rem;
   box-shadow: 14px 14px 5px 0 white;
 }
 
@@ -102,7 +102,7 @@ footer {
 
 button {
   border: none;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   background-color: var(--accentYellow);
   padding: 12px 25px;
   transition: all 500ms;
@@ -117,7 +117,7 @@ select:focus, button:focus {
 }
 
 .instructionContainer {
-  max-width: 700px;
+  // max-width: 700px;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 18vh;
@@ -272,9 +272,9 @@ select:focus, button:focus {
     padding-bottom: 10vh;
   }
   
-  .instructionContainer {
-    max-width: 420px;
-  }
+  // .instructionContainer {
+  //   max-width: 420px;
+  // }
 
   .superhero1Container {
     transform: translateY(-40px);
@@ -341,10 +341,10 @@ select:focus, button:focus {
 
 @media(max-width: 422px) {
 
-  .instructionContainer {
-    margin-top: 25px;
-    max-width: 300px;
-  }
+  // .instructionContainer {
+  //   margin-top: 25px;
+  //   max-width: 300px;
+  // }
 
   .superhero1Container {
     transform: translateY(-80px);

@@ -1,28 +1,32 @@
 {
-    "liveSassCompile.settings.formats": [
-      {
-        "format": "expanded",
-        "extensionName": ".css",
-        "savePath": "/styles"
-      }
-    ],
-    "liveSassCompile.settings.excludeList": [
-      "**/node_modules/**",
-      ".vscode/**"
-    ],
-    "liveSassCompile.settings.generateMap": false,
-    "liveSassCompile.settings.autoprefix": [
-      "> 1%",
-      "last 2 versions"
-    ],
-    "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#f84aa7",
-      "titleBar.inactiveBackground": "#f84aa799",
-      "titleBar.activeForeground": "#15202b",
-      "titleBar.inactiveForeground": "#15202b99",
-      "statusBar.background": "#f84aa7",
-      "statusBarItem.hoverBackground": "#f6198f",
-      "statusBar.foreground": "#15202b"
-    },
-    "peacock.color": "#F84AA7"
-  }
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/styles"
+    }
+  ],
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**"
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.autoprefix": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#f84aa7",
+    "titleBar.inactiveBackground": "#f84aa799",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveForeground": "#15202b99",
+    "statusBar.background": "#f84aa7",
+    "statusBarItem.hoverBackground": "#f6198f",
+    "statusBar.foreground": "#15202b"
+  },
+  "peacock.color": "#F84AA7",
+  "color-highlight.languages": [
+    "*",
+    "!scss"
+  ]
+}
