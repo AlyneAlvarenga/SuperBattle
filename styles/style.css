@@ -221,20 +221,6 @@ html {
           box-sizing: inherit;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .visuallyHidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -249,18 +235,10 @@ html {
   overflow: hidden;
 }
 
-.visuallyHidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0);
-  overflow: hidden;
+:root {
+  --accentYellow: #DFC21A;
+  --ffMainTitle: 'Nosifer', cursive;
+  --ffOtherTitles: 'Metal Mania', cursive;
 }
 
 html {
@@ -288,7 +266,7 @@ footer {
 h1 {
   text-align: center;
   font-size: 5rem;
-  font-family: 'Nosifer', cursive;
+  font-family: var(--ffMainTitle);
 }
 
 h2 {
@@ -301,7 +279,8 @@ h3 {
 }
 
 h2, h3 {
-  font-family: 'Metal Mania', cursive;
+  font-family: var(--ffOtherTitles);
+  letter-spacing: 0.2rem;
 }
 
 p, select, option, button {
@@ -352,7 +331,7 @@ main {
 footer {
   height: 30px;
   text-align: center;
-  background: #DFC21A;
+  background: var(--accentYellow);
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -373,7 +352,7 @@ footer p {
 button {
   border: none;
   border-radius: 15px;
-  background-color: #DFC21A;
+  background-color: var(--accentYellow);
   padding: 12px 25px;
   -webkit-transition: all 500ms;
   transition: all 500ms;
@@ -482,7 +461,7 @@ select:focus, button:focus {
 }
 
 .winnerTitle h3 {
-  border-bottom: 5px solid #DFC21A;
+  border-bottom: 5px solid var(--accentYellow);
 }
 
 .circleContainer {
