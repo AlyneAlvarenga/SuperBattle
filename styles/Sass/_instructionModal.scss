@@ -1,5 +1,6 @@
 .instructionModal {
   position: fixed;
+  z-index: 70;
   left: 0;
   top: 0;
   width: 100%;
@@ -16,6 +17,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 80;
   background-color: white;
   color: black;
   padding: 1rem 4rem;
@@ -58,4 +60,12 @@
   visibility: visible;
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.toggleInstructions {
+  padding: 0.6rem;
+}
+
+.fas {
+  font-size: 3rem;
 }

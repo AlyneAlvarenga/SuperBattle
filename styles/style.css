@@ -274,7 +274,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.8rem;
+  font-size: 4rem;
   margin: 0;
 }
 
@@ -315,17 +315,31 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 15vh;
+  min-height: 25vh;
 }
 
 main {
-  min-height: calc(85vh - 30px);
+  min-height: calc(75vh - 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer {
@@ -356,6 +370,7 @@ button {
   padding: 12px 25px;
   -webkit-transition: all 500ms;
   transition: all 500ms;
+  cursor: pointer;
 }
 
 button:hover {
@@ -365,12 +380,6 @@ button:hover {
 select:focus, button:focus {
   -webkit-box-shadow: 0 0 8px 3px black;
           box-shadow: 0 0 8px 3px black;
-}
-
-.instructionContainer {
-  margin: 0 auto;
-  text-align: center;
-  padding-bottom: 18vh;
 }
 
 .result {
@@ -395,11 +404,11 @@ select:focus, button:focus {
 .flexContainerTop {
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-bottom: 22vh;
+  padding-bottom: 18vh;
 }
 
 .flexContainerBottom {
-  padding-bottom: 50px;
+  padding-bottom: 6rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -440,6 +449,11 @@ select:focus, button:focus {
 }
 
 .winnerTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -453,14 +467,17 @@ select:focus, button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: black;
 }
 
 .winnerTitle p {
   text-align: center;
+  text-shadow: 2px 2px 2px white;
+  font-size: 2.5rem;
 }
 
 .winnerTitle h3 {
-  border-bottom: 5px solid var(--accentYellow);
+  text-shadow: 2px 2px 2px white;
 }
 
 .circleContainer {
@@ -500,6 +517,36 @@ select:focus, button:focus {
   stroke: white;
   stroke-width: 7px;
   stroke-linecap: round;
+}
+
+.loadingResults {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/balloon2.png), linear-gradient(153deg, rgba(0, 0, 0, 0.8) 0%, rgba(35, 35, 35, 0.9) 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
+.showInstructions {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
 }
 
 @media (max-width: 1100px) {
@@ -640,6 +687,7 @@ select:focus, button:focus {
 
 .instructionModal {
   position: fixed;
+  z-index: 70;
   left: 0;
   top: 0;
   width: 100%;
@@ -661,6 +709,7 @@ select:focus, button:focus {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 80;
   background-color: white;
   color: black;
   padding: 1rem 4rem;
@@ -717,4 +766,12 @@ select:focus, button:focus {
   transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
+.toggleInstructions {
+  padding: 0.6rem;
+}
+
+.fas {
+  font-size: 3rem;
 }

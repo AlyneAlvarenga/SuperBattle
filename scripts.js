@@ -204,17 +204,26 @@ superHeroApp.whoIsWinner = function() {
 
 //this triggers the css changes on button click
 superHeroApp.button = function(){
+  const toggleInstructions = $('.toggleInstructions');
+  const loadingResults = $('.loadingResults');
+
   superHeroApp.battleButton.on('click', function () {
-    superHeroApp.instructionContainer.css('display', 'none');
     superHeroApp.flexContainer.css('display', 'none');
-    $('.winnerContainer').css('display', 'block');
-    $('.result').css('display', 'flex');
-    if ($(window).width() <= 720) {
-        $('main').css('min-height', '260vh');
-    }
-    superHeroApp.whoIsWinner();
+    toggleInstructions.css('display', 'none');
     superHeroApp.battleButton.css('display', 'none');
-    superHeroApp.resetButton.css('display', 'block');
+    loadingResults.toggleClass('showInstructions');
+
+    $('.winnerContainer').css('display', 'block');
+    superHeroApp.whoIsWinner();
+
+    setTimeout(() => {
+      $('.result').css('display', 'flex');
+      if ($(window).width() <= 720) {
+          $('main').css('min-height', '260vh');
+      }
+      superHeroApp.resetButton.css('display', 'block');
+      loadingResults.toggleClass('showInstructions');
+    }, 3000);
   })
 }
 
@@ -235,6 +244,8 @@ superHeroApp.resetButton.on('click', function () {
   superHeroApp.superhero1.prop('selectedIndex', 0);
   superHeroApp.superhero2.prop('selectedIndex', 0);
   superHeroApp.typeOfBattle.prop('selectedIndex', 0);
+  const toggleInstructions = $('.toggleInstructions');
+  toggleInstructions.css('display', 'block');
 })
 
 superHeroApp.init = function(){

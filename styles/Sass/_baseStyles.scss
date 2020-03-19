@@ -38,7 +38,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.8rem;
+  font-size: 4rem;
   margin: 0;
 }
 
@@ -77,13 +77,17 @@ img {
 
 header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  min-height: 15vh;
+  min-height: 25vh;
 }
 
 main {
-  min-height: calc(85vh - 30px);
+  min-height: calc(75vh - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 footer {
@@ -106,6 +110,7 @@ button {
   background-color: var(--accentYellow);
   padding: 12px 25px;
   transition: all 500ms;
+  cursor: pointer;
   &:hover {
     background-color: white;
   }
@@ -114,13 +119,6 @@ button {
 
 select:focus, button:focus {
   box-shadow: 0 0 8px 3px black;
-}
-
-.instructionContainer {
-  // max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  padding-bottom: 18vh;
 }
 
 .result {
@@ -139,11 +137,11 @@ select:focus, button:focus {
 
 .flexContainerTop {
   justify-content: space-around;
-  padding-bottom: 22vh;
+  padding-bottom: 18vh;
 }
 
 .flexContainerBottom {
-  padding-bottom: 50px;
+  padding-bottom: 6rem;
   justify-content: center;
 }
 
@@ -165,16 +163,30 @@ select:focus, button:focus {
   align-items: center;
 }
 
+
 .winnerTitle {
+  // clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  // height: 300px;
+  // width: 300px;
+  // background-color: rgba(0, 0, 0, 0.8);
+  // border-radius: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: black;
   p {
     text-align: center;
+    text-shadow: 2px 2px 2px white;
+    font-size: 2.5rem;
   }
   h3 {
-    border-bottom: 5px solid var(--accentYellow);
+    // border-bottom: 5px solid var(--accentYellow);
+    text-shadow: 2px 2px 2px white;
   }
 }
 
@@ -216,6 +228,32 @@ select:focus, button:focus {
   stroke-linecap: round;
 }
 
+
+//LOADING
+
+.loadingResults {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/balloon2.png), linear-gradient(153deg, rgba(0,0,0,0.8) 0%, rgba(35,35,35,0.9) 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-attachment: fixed;
+  // background-size: 90%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.showInstructions {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
 
 //MEDIA QUERIES
 

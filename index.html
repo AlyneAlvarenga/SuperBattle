@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="./assets/sword.svg" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Atomic+Age|Federant|Metal+Mania|Nosifer&display=swap"
     rel="stylesheet">
+  <script src="https://kit.fontawesome.com/33241c2ec5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
@@ -17,31 +18,25 @@
     <div class="wrapper">
       <header>
         <h1>Super battle</h1>
+        <button class="toggleInstructions"><i class="fas fa-info-circle"></i></button>
+        <div class="instructionModal">
+          <div class="instructions">
+            <span class="closeInstructions">X</span>
+            <h2>Instructions</h2>
+            <ol>
+              <li>Select two champions from the lists;</li>
+              <li>Select a condition of battle;</li>
+              <li>Click on "Battle" to see who the winner is!</li>
+            </ol>
+          </div>
+        </div>
       </header>
 
       <main>
-        <!-- Top section for instructions -->
-        <section class="topSection">
-          <div class="instructionContainer">
-            <button class="toggleInstructions">See Instructions</button>
-            <div class="instructionModal">
-              <div class="instructions">
-                <span class="closeInstructions">X</span>
-                <h2>Instructions</h2>
-                <ol>
-                  <li>Select two champions from the lists;</li>
-                  <li>Select a condition of battle;</li>
-                  <li>Click on "Battle" to see who the winner is!</li>
-                </ol>
-              </div>
-            </div>
-            <!-- <h2>Instructions</h2> -->
-            <!-- <p>Select 2 champions from the lists and select a condition of battle.</p>
-            <p>Click the button to to determine the winner.</p> -->
-          </div>
-          <div class="htmlToAppend winnerContainer"></div>
+        <!-- Section for displaying modal and results -->
+        <section class="loadingResults winnerContainer">
         </section>
-        <!-- Bottom section for main content.-->
+        <!-- Section for displaying champion options and winner -->
         <section class="bottomSection">
           <div class="flexContainerTop flexContainer">
             <!-- First superhero selection.-->
