@@ -220,7 +220,7 @@ superHeroApp.button = function(){
     if (superHeroApp.powerStats[0].name !== '' && superHeroApp.powerStats[1].name !== '' && superHeroApp.powerStats[2].selection !== '') {
       
       scrollToTop();
-      
+
       superHeroApp.flexContainer.css('display', 'none');
       superHeroApp.toggleInstructions.css('display', 'none');
       superHeroApp.battleButton.css('display', 'none');
@@ -266,6 +266,8 @@ superHeroApp.resetButton.on('click', function () {
     },
     { selection: '' },
   ];
+
+  scrollToTop();
 
   superHeroApp.instructionContainer.css('display', 'block');
   superHeroApp.flexContainer.css('display', 'flex');
