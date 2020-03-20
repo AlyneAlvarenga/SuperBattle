@@ -569,36 +569,27 @@ select:focus, button:focus {
     background-position: center;
   }
   header {
-    min-height: 35vh;
+    min-height: 240px;
   }
   main {
-    min-height: 100vh;
+    min-height: 1100px;
     display: block;
   }
   .flexContainerTop {
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 230px;
+    min-height: 631px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 20vh;
-    padding-bottom: 10vh;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .superhero1Container {
-    -webkit-transform: translateY(-8vh);
-            transform: translateY(-8vh);
-  }
-  .superhero2Container {
-    -webkit-transform: translateY(30vh);
-            transform: translateY(30vh);
-  }
-  .battleContainer {
-    -webkit-transform: translateY(30vh);
-            transform: translateY(30vh);
-    padding: 0;
-  }
-  .battleButton {
-    -webkit-transform: translateY(35vh);
-            transform: translateY(35vh);
+  .flexContainerBottom {
+    padding-top: 100px;
   }
   .winnerTitle {
     padding-top: 30px;
@@ -621,18 +612,18 @@ select:focus, button:focus {
             justify-content: space-between;
   }
   .result1 {
-    -webkit-transform: translateY(-10vh);
-            transform: translateY(-10vh);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
     padding-right: 0;
   }
   .result2 {
     padding-left: 0;
-    -webkit-transform: translateY(16vh);
-            transform: translateY(16vh);
+    -webkit-transform: translateY(220px);
+            transform: translateY(220px);
   }
   .resetButton {
-    -webkit-transform: translateY(20vh);
-            transform: translateY(20vh);
+    -webkit-transform: translateY(240px);
+            transform: translateY(240px);
   }
 }
 

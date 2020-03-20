@@ -155,7 +155,6 @@ select:focus, button:focus {
 }
 
 .flexContainerBottom {
-  // padding-bottom: 6rem;
   justify-content: center;
 }
 
@@ -211,8 +210,6 @@ select:focus, button:focus {
   background-image: url(../assets/balloon2.png), linear-gradient(153deg, rgba(0,0,0,0.8) 0%, rgba(35,35,35,0.9) 100%);
   background-repeat: no-repeat;
   background-position: center;
-  // background-attachment: fixed;
-  // background-size: 90%;
   opacity: 0;
   visibility: hidden;
   transform: scale(1.1);
@@ -225,6 +222,7 @@ select:focus, button:focus {
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+
 
 //MEDIA QUERIES
 
@@ -271,35 +269,25 @@ select:focus, button:focus {
   }
 
   header {
-    min-height: 35vh;
+    min-height: 240px;
   }
 
   main {
-    min-height: 100vh;
+    min-height: 1100px;
     display: block;
   }
   
   .flexContainerTop {
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 230px;
+    min-height: 631px;
     flex-direction: column;
-    padding-top: 20vh;
-    padding-bottom: 10vh;
+    justify-content: space-between;
   }
 
-  .superhero1Container {
-    transform: translateY(-8vh);
-  }
-
-  .superhero2Container {
-    transform: translateY(30vh);
-  }
-
-  .battleContainer {
-    transform: translateY(30vh);
-    padding: 0;
-  }
-
-  .battleButton {
-    transform: translateY(35vh);
+  .flexContainerBottom {
+    padding-top: 100px;
   }
 
   //
@@ -320,19 +308,17 @@ select:focus, button:focus {
   }
 
   .result1 {
-    // transform: translateY(-2vh);
-    transform: translateY(-10vh);
+    transform: translateY(-50px);
     padding-right: 0;
   }
   
   .result2{
     padding-left: 0;
-    // padding-top: 45vh;
-    transform: translateY(16vh);
+    transform: translateY(220px);
   }
 
   .resetButton{
-    transform: translateY(20vh);
+    transform: translateY(240px);
   }
 }
 
