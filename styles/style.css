@@ -498,6 +498,7 @@ select:focus, button:focus {
 
 .winnerTitle h3 {
   text-shadow: 2px 2px 2px white;
+  text-align: center;
 }
 
 .loadingResults {
@@ -572,14 +573,14 @@ select:focus, button:focus {
     min-height: 240px;
   }
   main {
-    min-height: 1100px;
+    min-height: 1250px;
     display: block;
   }
   .flexContainerTop {
     margin: 0;
     padding-bottom: 0;
-    padding-top: 230px;
-    min-height: 631px;
+    padding-top: 280px;
+    min-height: 723px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -592,6 +593,7 @@ select:focus, button:focus {
     padding-top: 100px;
   }
   .winnerTitle {
+    min-width: 280px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -612,18 +614,18 @@ select:focus, button:focus {
             justify-content: space-between;
   }
   .result1 {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
     padding-right: 0;
   }
   .result2 {
     padding-left: 0;
-    -webkit-transform: translateY(220px);
-            transform: translateY(220px);
+    -webkit-transform: translateY(355px);
+            transform: translateY(355px);
   }
   .resetButton {
-    -webkit-transform: translateY(240px);
-            transform: translateY(240px);
+    -webkit-transform: translateY(380px);
+            transform: translateY(380px);
   }
 }
 
@@ -640,6 +642,15 @@ select:focus, button:focus {
   }
   footer p {
     line-height: 1.3;
+  }
+}
+
+@media (max-width: 375px) {
+  .flexContainerImgCircle {
+    min-width: 290px;
+  }
+  .imgContainer {
+    width: 170px;
   }
 }
 
@@ -710,7 +721,7 @@ select:focus, button:focus {
   transition: all 250ms;
 }
 
-.closeInstructions:hover {
+.closeInstructions:hover, .closeInstructions:focus {
   background-color: black;
   color: var(--accentYellow);
 }
@@ -732,6 +743,13 @@ select:focus, button:focus {
 
 .fas {
   font-size: 3rem;
+}
+
+@media (max-width: 375px) {
+  .instructions {
+    padding: 2rem;
+    width: 29rem;
+  }
 }
 
 .circleContainer {

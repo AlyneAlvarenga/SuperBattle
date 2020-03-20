@@ -50,7 +50,7 @@
   transition: all 250ms;
 }
 
-.closeInstructions:hover {
+.closeInstructions:hover, .closeInstructions:focus {
   background-color: black;
   color: var(--accentYellow);
 }
@@ -68,4 +68,11 @@
 
 .fas {
   font-size: 3rem;
+}
+
+@media(max-width: 375px) {
+  .instructions {
+    padding: 2rem;
+    width: 29rem;
+  }
 }

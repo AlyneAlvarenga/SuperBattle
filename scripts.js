@@ -1,5 +1,6 @@
 const superHeroApp = {};
 
+superHeroApp.toggleInstructions = $('.toggleInstructions');
 
 superHeroApp.superhero1 = $('#superhero1');
 superHeroApp.superhero2 = $('#superhero2');
@@ -208,24 +209,23 @@ superHeroApp.whoIsWinner = function() {
 
 //this triggers the css changes on button click
 superHeroApp.button = function(){
-  const toggleInstructions = $('.toggleInstructions');
   const loadingResults = $('.loadingResults');
 
   superHeroApp.battleButton.on('click', function () {
 
     if (superHeroApp.powerStats[0].name !== '' && superHeroApp.powerStats[1].name !== '' && superHeroApp.powerStats[2].selection !== '') {
       superHeroApp.flexContainer.css('display', 'none');
-      toggleInstructions.css('display', 'none');
+      superHeroApp.toggleInstructions.css('display', 'none');
       superHeroApp.battleButton.css('display', 'none');
       loadingResults.toggleClass('showInstructions');
   
       superHeroApp.whoIsWinner();
   
-      setTimeout(() => {
-        $('.result').css('display', 'flex');
-        superHeroApp.resetButton.css('display', 'block');
-        loadingResults.toggleClass('showInstructions');
-      }, 3000);
+      // setTimeout(() => {
+      //   $('.result').css('display', 'flex');
+      //   superHeroApp.resetButton.css('display', 'block');
+      //   loadingResults.toggleClass('showInstructions');
+      // }, 3000);
 
     } else {
       alert('Please select two champions and a battle condition!');
@@ -270,8 +270,7 @@ superHeroApp.resetButton.on('click', function () {
   superHeroApp.superhero2.prop('selectedIndex', 0);
   superHeroApp.typeOfBattle.prop('selectedIndex', 0);
   
-  const toggleInstructions = $('.toggleInstructions');
-  toggleInstructions.css('display', 'block');
+  superHeroApp.toggleInstructions.css('display', 'block');
 })
 
 superHeroApp.init = function(){
@@ -285,7 +284,6 @@ $(function() {
   superHeroApp.init();
 
   const instructionModal = $('.instructionModal');
-  const toggleInstructions = $('.toggleInstructions');
   const closeInstructions = $('.closeInstructions');
 
   function toggleInstructionModal() {
@@ -298,7 +296,7 @@ $(function() {
     }
   }
 
-  toggleInstructions.on('click', toggleInstructionModal);
+  superHeroApp.toggleInstructions.on('click', toggleInstructionModal);
   closeInstructions.on('click', toggleInstructionModal);
   $(window).on('click', mainWindowClick);
 });
