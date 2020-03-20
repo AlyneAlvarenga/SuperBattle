@@ -221,11 +221,11 @@ superHeroApp.button = function(){
   
       superHeroApp.whoIsWinner();
   
-      // setTimeout(() => {
-      //   $('.result').css('display', 'flex');
-      //   superHeroApp.resetButton.css('display', 'block');
-      //   loadingResults.toggleClass('showInstructions');
-      // }, 3000);
+      setTimeout(() => {
+        $('.result').css('display', 'flex');
+        superHeroApp.resetButton.css('display', 'block');
+        loadingResults.toggleClass('showInstructions');
+      }, 3000);
 
     } else {
       alert('Please select two champions and a battle condition!');
