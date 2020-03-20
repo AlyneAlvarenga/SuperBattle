@@ -51,21 +51,23 @@ superHeroApp.player1 = function(){
       const htmlToAppend = `
       <div class="resultContainer">
         <h2>${result.name}</h2>
-        <div class="imgContainer">
-          <img src="${result.image.url}" alt="${result.name}"/>
-        </div>
-        <div class="circleContainer">
-          <svg class="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <g class="svgGroup">
-            <circle class="baseCircle" cx="50" cy="50" r="45" />
-            <path class="secondCircleHero1" d="
-                M 50, 50
-                m -45, 0
-                a 45,45 0 1,0 90,0
-                a 45,45 0 1,0 -90,0"></path>
-            </g>
-          </svg>
-          <span class="circleLabel circleLabelHero1"></span>
+        <div class="flexContainerImgCircle">
+          <div class="imgContainer">
+            <img src="${result.image.url}" alt="${result.name}"/>
+          </div>
+          <div class="circleContainer">
+            <svg class="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <g class="svgGroup">
+              <circle class="baseCircle" cx="50" cy="50" r="45" />
+              <path class="secondCircleHero1" d="
+                  M 50, 50
+                  m -45, 0
+                  a 45,45 0 1,0 90,0
+                  a 45,45 0 1,0 -90,0"></path>
+              </g>
+            </svg>
+            <span class="circleLabel circleLabelHero1"></span>
+          </div>
         </div>
       </div>`;
       //place the result on the page
@@ -97,21 +99,23 @@ superHeroApp.player2 = function(){
       const htmlToAppend = `
       <div class="resultContainer">
         <h2>${result.name}</h2>
-        <div class="imgContainer">
-          <img src="${result.image.url}" alt="${result.name}"/>
-        </div>
-        <div class="circleContainer">
-          <svg class="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <g class="svgGroup">
-            <circle class="baseCircle" cx="50" cy="50" r="45" />
-            <path class="secondCircleHero2" d="
-                M 50, 50
-                m -45, 0
-                a 45,45 0 1,0 90,0
-                a 45,45 0 1,0 -90,0"></path>
-            </g>
-          </svg>
-          <span class="circleLabel circleLabelHero2"></span>
+        <div class="flexContainerImgCircle">
+          <div class="imgContainer">
+            <img src="${result.image.url}" alt="${result.name}"/>
+          </div>
+          <div class="circleContainer">
+            <svg class="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <g class="svgGroup">
+              <circle class="baseCircle" cx="50" cy="50" r="45" />
+              <path class="secondCircleHero2" d="
+                  M 50, 50
+                  m -45, 0
+                  a 45,45 0 1,0 90,0
+                  a 45,45 0 1,0 -90,0"></path>
+              </g>
+            </svg>
+            <span class="circleLabel circleLabelHero2"></span>
+          </div>
         </div>
       </div>`;
       //place the result on the page
@@ -208,42 +212,72 @@ superHeroApp.button = function(){
   const loadingResults = $('.loadingResults');
 
   superHeroApp.battleButton.on('click', function () {
-    superHeroApp.flexContainer.css('display', 'none');
-    toggleInstructions.css('display', 'none');
-    superHeroApp.battleButton.css('display', 'none');
-    loadingResults.toggleClass('showInstructions');
 
-    $('.winnerContainer').css('display', 'block');
-    superHeroApp.whoIsWinner();
-
-    setTimeout(() => {
-      $('.result').css('display', 'flex');
-      if ($(window).width() <= 720) {
-          $('main').css('min-height', '260vh');
-      }
-      superHeroApp.resetButton.css('display', 'block');
+    if (superHeroApp.powerStats[0].name !== '' && superHeroApp.powerStats[1].name !== '' && superHeroApp.powerStats[2].selection !== '') {
+      superHeroApp.flexContainer.css('display', 'none');
+      toggleInstructions.css('display', 'none');
+      superHeroApp.battleButton.css('display', 'none');
       loadingResults.toggleClass('showInstructions');
-    }, 3000);
+  
+      superHeroApp.whoIsWinner();
+  
+      setTimeout(() => {
+        // $('main').css('justify-content', 'initial');
+        $('.result').css('display', 'flex');
+        if ($(window).width() <= 770 && $(window).height() >= 900) {
+          $('main').css('min-height', '110vh');
+        } else if ($(window).width() <= 770) {
+          $('main').css('min-height', '160vh');
+        }
+        superHeroApp.resetButton.css('display', 'block');
+        loadingResults.toggleClass('showInstructions');
+      }, 3000);
+
+    } else {
+      alert('Please select two champions and a battle condition!');
+    }
+
   })
 }
 
 //this resets the css changes on button click
 superHeroApp.resetButton.on('click', function () {
+  $('.result').css('display', 'none');
+
   $('.result1').children().remove();
   $('.result2').children().remove();
-  $('.result').css('display', 'none');
   $('.winnerContainer').children().remove();
+
+  superHeroApp.powerStats = [
+    {
+      name: '',
+      intelligence: 0,
+      speed: 0,
+      combat: 0,
+      strength: 0,
+    },
+    {
+      name: '',
+      intelligence: 0,
+      speed: 0,
+      combat: 0,
+      strength: 0,
+    },
+    { selection: '' },
+  ];
+
   superHeroApp.instructionContainer.css('display', 'block');
   superHeroApp.flexContainer.css('display', 'flex');
   superHeroApp.battleButton.css('display', 'flex');
   superHeroApp.resetButton.css('display', 'none');
-  if ($(window).width() <= 720) {
-      $('main').css('min-height', '130vh');
+  if ($(window).width() <= 770) {
+      $('main').css('min-height', '100vh');
   }
   //https://stackoverflow.com/questions/10502093/how-to-reset-a-select-element-with-jquery
   superHeroApp.superhero1.prop('selectedIndex', 0);
   superHeroApp.superhero2.prop('selectedIndex', 0);
   superHeroApp.typeOfBattle.prop('selectedIndex', 0);
+  
   const toggleInstructions = $('.toggleInstructions');
   toggleInstructions.css('display', 'block');
 })

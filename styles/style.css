@@ -309,6 +309,9 @@ img {
 .imgContainer {
   width: 250px;
   margin: 10px 0 35px;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 header {
@@ -388,6 +391,36 @@ select:focus, button:focus {
       justify-content: space-around;
 }
 
+.resultContainer {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexContainerImgCircle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .htmlToAppend {
   display: none;
 }
@@ -408,7 +441,6 @@ select:focus, button:focus {
 }
 
 .flexContainerBottom {
-  padding-bottom: 6rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -426,26 +458,14 @@ select:focus, button:focus {
           align-items: center;
 }
 
-.resetButton {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+.battleButton {
+  -webkit-transform: translateY(4.5rem);
+          transform: translateY(4.5rem);
 }
 
-.resultContainer {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.resetButton {
+  -webkit-transform: translateY(-140px);
+          transform: translateY(-140px);
 }
 
 .winnerTitle {
@@ -478,45 +498,6 @@ select:focus, button:focus {
 
 .winnerTitle h3 {
   text-shadow: 2px 2px 2px white;
-}
-
-.circleContainer {
-  width: 150px;
-  height: 150px;
-  position: relative;
-}
-
-.circleLabel {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 2.5rem;
-}
-
-.svgGroup {
-  fill: none;
-  stroke: none;
-}
-
-.baseCircle {
-  stroke-width: 7px;
-  stroke: grey;
-}
-
-.secondCircleHero1, .secondCircleHero2 {
-  stroke: white;
-  stroke-width: 7px;
-  stroke-linecap: round;
 }
 
 .loadingResults {
@@ -556,71 +537,68 @@ select:focus, button:focus {
             justify-content: space-between;
     margin: 0 7%;
   }
-}
-
-@media (max-width: 990px) {
-  .result {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 0 2rem;
+  .result1 {
+    padding-right: 8rem;
+  }
+  .result2 {
+    padding-left: 8rem;
   }
 }
 
-@media (max-width: 870px) {
+@media (max-width: 975px) {
+  .result1 {
+    padding-right: 14rem;
+  }
+  .result2 {
+    padding-left: 14rem;
+  }
+}
+
+@media (max-width: 890px) {
   .background {
     background-position: 48%;
-  }
-  .flexContainerTop {
-    margin: 0 4%;
-  }
-}
-
-@media (max-width: 800px) {
-  .resetButton {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
   }
   .imgContainer {
     width: 200px;
   }
-  .circleContainer, .circleLabel {
-    width: 100px;
-    height: 100px;
-  }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 770px) {
   .background {
     background-image: url("../assets/backgroundMobile.jpg");
     background-position: center;
   }
+  header {
+    min-height: 35vh;
+  }
   main {
-    min-height: 130vh;
+    min-height: 100vh;
+    display: block;
   }
   .flexContainerTop {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 20vh;
     padding-bottom: 10vh;
   }
   .superhero1Container {
-    -webkit-transform: translateY(-40px);
-            transform: translateY(-40px);
+    -webkit-transform: translateY(-8vh);
+            transform: translateY(-8vh);
   }
   .superhero2Container {
-    -webkit-transform: translateY(226px);
-            transform: translateY(226px);
+    -webkit-transform: translateY(30vh);
+            transform: translateY(30vh);
   }
   .battleContainer {
-    -webkit-transform: translateY(230px);
-            transform: translateY(230px);
+    -webkit-transform: translateY(30vh);
+            transform: translateY(30vh);
     padding: 0;
   }
   .battleButton {
-    -webkit-transform: translateY(225px);
-            transform: translateY(225px);
+    -webkit-transform: translateY(35vh);
+            transform: translateY(35vh);
   }
   .winnerTitle {
     padding-top: 30px;
@@ -632,8 +610,29 @@ select:focus, button:focus {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .flexContainerImgCircle {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-width: 320px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .result1 {
+    -webkit-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+    padding-right: 0;
+  }
   .result2 {
-    padding-top: 430px;
+    padding-left: 0;
+    -webkit-transform: translateY(16vh);
+            transform: translateY(16vh);
+  }
+  .resetButton {
+    -webkit-transform: translateY(20vh);
+            transform: translateY(20vh);
   }
 }
 
@@ -644,38 +643,6 @@ select:focus, button:focus {
   h2 {
     font-size: 3rem;
   }
-  .superhero1Container {
-    -webkit-transform: translateY(-37px);
-            transform: translateY(-37px);
-  }
-  .superhero2Container {
-    -webkit-transform: translateY(225px);
-            transform: translateY(225px);
-  }
-  .circleLabel {
-    font-size: 2rem;
-  }
-  footer {
-    height: 50px;
-    padding: 5px 0;
-  }
-  footer p {
-    line-height: 1.3;
-  }
-}
-
-@media (max-width: 422px) {
-  .superhero1Container {
-    -webkit-transform: translateY(-80px);
-            transform: translateY(-80px);
-  }
-  .superhero2Container {
-    -webkit-transform: translateY(217px);
-            transform: translateY(217px);
-  }
-}
-
-@media (max-width: 360px) {
   footer {
     height: 50px;
     padding: 5px 0;
@@ -774,4 +741,51 @@ select:focus, button:focus {
 
 .fas {
   font-size: 3rem;
+}
+
+.circleContainer {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.circleLabel {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.5rem;
+}
+
+.svgGroup {
+  fill: none;
+  stroke: none;
+}
+
+.baseCircle {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.secondCircleHero1, .secondCircleHero2 {
+  stroke: white;
+  stroke-width: 7px;
+  stroke-linecap: round;
+}
+
+@media (max-width: 890px) {
+  .circleContainer, .circleLabel {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+  }
 }

@@ -51,7 +51,7 @@ p, select, option, button, li {
   font-size: 2rem;
 }
 
-.wrapper{
+.wrapper {
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -73,6 +73,7 @@ img {
 .imgContainer {
   width: 250px;
   margin: 10px 0 35px;
+  align-self: start;
 }
 
 header {
@@ -114,7 +115,6 @@ button {
   &:hover {
     background-color: white;
   }
-
 }
 
 select:focus, button:focus {
@@ -124,6 +124,20 @@ select:focus, button:focus {
 .result {
   display: none;
   justify-content: space-around;
+}
+
+.resultContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexContainerImgCircle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .htmlToAppend {
@@ -141,7 +155,7 @@ select:focus, button:focus {
 }
 
 .flexContainerBottom {
-  padding-bottom: 6rem;
+  // padding-bottom: 6rem;
   justify-content: center;
 }
 
@@ -151,18 +165,13 @@ select:focus, button:focus {
   align-items: center;
 }
 
+.battleButton {
+  transform: translateY(4.5rem);
+}
+
 .resetButton{
-  transform: translateY(-50px)
+  transform: translateY(-140px)
 }
-
-.resultContainer {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 
 .winnerTitle {
   // clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
@@ -188,44 +197,6 @@ select:focus, button:focus {
     // border-bottom: 5px solid var(--accentYellow);
     text-shadow: 2px 2px 2px white;
   }
-}
-
-//drawing the circles
-.circleContainer {
-  width: 150px;
-  height: 150px;
-  position: relative;
-}
-
-// drawing labels inside the circles
-.circleLabel {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-}
-
-//making it so we can see the inside of the circle
-.svgGroup {
-  fill: none;
-  stroke: none;
-}
-
-//the circle that represents 100%
-.baseCircle {
-  stroke-width: 7px;
-  stroke: grey;
-}
-
-//this will represent the percentage of the powerstat
-.secondCircleHero1, .secondCircleHero2 {
-  stroke: white;
-  stroke-width: 7px;
-  stroke-linecap: round;
 }
 
 
@@ -263,72 +234,72 @@ select:focus, button:focus {
     justify-content: space-between;
     margin: 0 7%;
   }
-}
 
-@media(max-width:990px){
-  .result {
-    justify-content: space-between;
-    padding: 0 2rem;
+  .result1 {
+    padding-right: 8rem;
+  }
+  
+  .result2 {
+    padding-left: 8rem;
   }
 }
 
-@media (max-width: 870px) {
+@media(max-width:975px){
+  .result1 {
+    padding-right: 14rem;
+  }
+  
+  .result2 {
+    padding-left: 14rem;
+  }
+}
+
+@media(max-width: 890px){
   .background {
     background-position: 48%;
   }
 
-  .flexContainerTop {
-    margin: 0 4%;
-  }
-}
-
-@media(max-width:800px){
-  .resetButton{
-    transform: translateY(50px)
-  }
   .imgContainer {
     width: 200px;
   }
-  .circleContainer, .circleLabel  {
-    width: 100px;
-    height: 100px;
-  }
 }
 
-@media(max-width: 720px) {
+@media(max-width: 770px) {
   .background {
     background-image: url('../assets/backgroundMobile.jpg');
     background-position: center;
   }
 
+  header {
+    min-height: 35vh;
+  }
+
   main {
-    min-height: 130vh;
+    min-height: 100vh;
+    display: block;
   }
   
   .flexContainerTop {
     flex-direction: column;
+    padding-top: 20vh;
     padding-bottom: 10vh;
   }
-  
-  // .instructionContainer {
-  //   max-width: 420px;
-  // }
 
   .superhero1Container {
-    transform: translateY(-40px);
+    transform: translateY(-8vh);
   }
 
   .superhero2Container {
-    transform: translateY(226px);
+    transform: translateY(30vh);
   }
 
   .battleContainer {
-    transform: translateY(230px);
+    transform: translateY(30vh);
     padding: 0;
   }
 
   .battleButton {
-    transform: translateY(225px);
+    transform: translateY(35vh);
   }
 
   //
@@ -342,8 +313,26 @@ select:focus, button:focus {
     flex-direction: column;
   }
 
+  .flexContainerImgCircle {
+    flex-direction: row;
+    min-width: 320px;
+    justify-content: space-between;
+  }
+
+  .result1 {
+    // transform: translateY(-2vh);
+    transform: translateY(-10vh);
+    padding-right: 0;
+  }
+  
   .result2{
-    padding-top: 430px;
+    padding-left: 0;
+    // padding-top: 45vh;
+    transform: translateY(16vh);
+  }
+
+  .resetButton{
+    transform: translateY(20vh);
   }
 }
 
@@ -356,44 +345,6 @@ select:focus, button:focus {
     font-size: 3rem;
   }
 
-  .superhero1Container {
-    transform: translateY(-37px);
-  }
-
-  .superhero2Container {
-    transform: translateY(225px);
-  }
-
-  .circleLabel {
-    font-size: 2rem;
-  }
-
-  footer {
-    height: 50px;
-    padding: 5px 0;
-    p {
-      line-height: 1.3;
-    }
-  }
-}
-
-@media(max-width: 422px) {
-
-  // .instructionContainer {
-  //   margin-top: 25px;
-  //   max-width: 300px;
-  // }
-
-  .superhero1Container {
-    transform: translateY(-80px);
-  }
-
-  .superhero2Container {
-    transform: translateY(217px);
-  }
-}
-
-@media(max-width: 360px) {
   footer {
     height: 50px;
     padding: 5px 0;
