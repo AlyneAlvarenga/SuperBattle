@@ -207,6 +207,10 @@ superHeroApp.whoIsWinner = function() {
   }
 }
 
+function scrollToTop() {
+  window.scrollTo(0, 0);
+} 
+
 //this triggers the css changes on button click
 superHeroApp.button = function(){
   const loadingResults = $('.loadingResults');
@@ -214,6 +218,9 @@ superHeroApp.button = function(){
   superHeroApp.battleButton.on('click', function () {
 
     if (superHeroApp.powerStats[0].name !== '' && superHeroApp.powerStats[1].name !== '' && superHeroApp.powerStats[2].selection !== '') {
+      
+      scrollToTop();
+      
       superHeroApp.flexContainer.css('display', 'none');
       superHeroApp.toggleInstructions.css('display', 'none');
       superHeroApp.battleButton.css('display', 'none');
